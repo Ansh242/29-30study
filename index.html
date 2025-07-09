@@ -64,12 +64,21 @@
       50% { transform: translateY(-10px); }
     }
 
-    @keyframes glow {
+    /* @keyframes glow {
       from {
         box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
       }
       to {
         box-shadow: 0 0 30px rgba(16, 185, 129, 0.8);
+      }
+    } */
+
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 30px rgb(255, 98, 0, 0.5);
+      }
+      to {
+        box-shadow: 0 0 90px rgb(255, 98, 0, 1.0);
       }
     }
 
@@ -235,6 +244,9 @@
         <a href="https://www.youtube.com/watch?v=rfscVS0vtbw" target="_blank" class="bg-primary hover:bg-blue-400 px-4 py-2 rounded-lg transition-colors">
           Python Tutorial (freecodecamp)
         </a>
+        <a href="https://pll.harvard.edu/subject/computer-science" target="_blank" class="bg-primary hover:bg-blue-400 px-4 py-2 rounded-lg transition-colors">
+          Harvard CS50 (all domains)
+        </a>
       </div>
     </div>
 
@@ -279,6 +291,9 @@
         <a href="http://www.theodinproject.com/" target="_blank" class="bg-blue-400 hover:bg-secondary px-4 py-2 rounded-lg transition-colors">
             The Odin Project
         </a>
+        <a href="https://pll.harvard.edu/subject/computer-science" target="_blank" class="bg-blue-400 hover:bg-secondary px-4 py-2 rounded-lg transition-colors">
+          Harvard CS50 (all domains)
+        </a>
       </div>
     </div>
 
@@ -292,6 +307,10 @@
   </main>
 
   <h5>*All links provided are from YouTube</h5>
+  <br>
+  <div class="bold animate-glow animate-bounce-in">
+  <h5>To expand this website, give the relevant links in the reddit post</h5>
+  </div>
 
   <!-- Footer -->
   <footer class="bg-black/40 backdrop-blur-md mt-16 py-8 border-t border-gray-700/50">
