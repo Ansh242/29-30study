@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Materials</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#10b981',
+            secondary: '#059669',
+            accent: '#34d399'
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.6s ease-in-out',
+            'slide-up': 'slideUp 0.5s ease-out',
+            'bounce-in': 'bounceIn 0.8s ease-out',
+            'float': 'float 3s ease-in-out infinite',
+            'glow': 'glow 2s ease-in-out infinite alternate'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes bounceIn {
+      0% {
+        transform: scale(0.3);
+        opacity: 0;
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      70% {
+        transform: scale(0.9);
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+      }
+      to {
+        box-shadow: 0 0 30px rgba(16, 185, 129, 0.8);
+      }
+    }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    }
+
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .resource-card {
+      background: linear-gradient(135deg, rgba(55, 65, 81, 0.8) 0%, rgba(31, 41, 55, 0.8) 100%);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(75, 85, 99, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+      border-color: rgba(16, 185, 129, 0.5);
+    }
+
+    .subject-tab {
+      transition: all 0.3s ease;
+    }
+
+    .subject-tab.active {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: white;
+      box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+    }
+  </style>
+  <style>
+    h5{
+        text-align: center;
+        text-shadow: #0f172a;
+        text-decoration: wavy;
+        text-decoration-thickness: 10 px;
+        text-decoration-color: aquamarine;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans gradient-bg">
+
+  <!-- Header -->
+  <header class="bg-gray-900/90 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-wrap items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="/assets/communityIcon_j5nctdyq50rb1.jpg" alt=" Logo" class="w-10 h-10 rounded-full border-2 border-primary" />
+        <span class="text-xl font-bold text-white"></span>
+      </div>
+
+      <!-- Hamburger Button -->
+      <button id="menu-toggle" class="md:hidden text-white focus:outline-none hover:text-primary transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex gap-6 text-sm md:text-base">
+        <a href="index.html" class="hover:text-primary transition-colors duration-200">Home</a>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden px-4 pb-4 hidden border-t border-gray-800">
+      <nav class="flex flex-col space-y-3 pt-4">
+        <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-6 py-8">
+
+    <!-- Hero Section -->
+    <div class="text-center mb-12 animate-fade-in">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4">
+        <span class="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+          📚 Study Materials
+        </span>
+      </h1>
+      <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+        Comprehensive resources, notes, and practice Materials
+      </p>
+    </div>
+
+    <!-- Quick Stats -->
+<div class="w-screen flex justify-center overflow-x-hidden">
+    <div class="grid md:grid-cols-4 gap-6 mb-12 animate-slide-up">
+      <div class="bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl p-6 border border-primary/30 text-center">
+        <div class="text-4xl mb-3 animate-float">📖</div>
+        <h3 class="text-lg font-semibold mb-2">Resources</h3>
+        <p class="text-2xl font-bold text-primary">50+</p>
+      </div>
+      
+      <div class="bg-gradient-to-br from-secondary/20 to-secondary/5 rounded-2xl p-6 border border-secondary/30 text-center">
+        <div class="text-4xl mb-3 animate-float" style="animation-delay: 0.5s;">🧪</div>
+        <h3 class="text-lg font-semibold mb-2">Practice Tests</h3>
+        <p class="text-2xl font-bold text-secondary">50+</p>
+      </div>
+      
+      <div class="bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl p-6 border border-accent/30 text-center">
+        <div class="text-4xl mb-3 animate-float" style="animation-delay: 1s;">📝</div>
+        <h3 class="text-lg font-semibold mb-2">Question Banks</h3>
+        <p class="text-2xl font-bold text-accent">10K+</p>
+      </div>
+      
+      <!-- <div class="bg-gradient-to-br from-yellow-500/20 to-yellow-500/5 rounded-2xl p-6 border border-yellow-500/30 text-center">
+        <div class="text-4xl mb-3 animate-float" style="animation-delay: 1.5s;">🎯</div>
+        <h3 class="text-lg font-semibold mb-2">Mock Tests</h3>
+        <p class="text-2xl font-bold text-yellow-400">25+</p>
+      </div> -->
+    </div>
+</div>
+
+    <!-- Subject Tabs -->
+    <div class="flex justify-center mb-8 animate-slide-up">
+      <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2 border border-gray-700/50">
+        <div class="flex flex-wrap gap-2 justify-center">
+          <button class="subject-tab active px-6 py-3 rounded-xl font-semibold" data-subject="python">
+            Python
+          </button>
+          <button class="subject-tab bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-xl font-semibold" data-subject="Web_Dev">
+            Web Dev
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Study Materials Grid -->
+    <section id="materialsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 animate-bounce-in">
+      <!-- Physics Materials (Default) -->
+      <div class="subject-content" data-subject="python">
+        
+        <!-- courses -->
+<div class="w-screen flex justify-center overflow-x-hidden">
+  <!-- Container to hold and wrap cards -->
+  <div class="flex gap-8 flex-wrap justify-center max-w-[1100px] w-full px-4">
+    
+    <!-- CARD 1 -->
+    <div class="resource-card rounded-3xl p-8 card-hover w-full md:w-[500px]">
+      <div class="flex gap-4 mb-6">
+        <div class="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center animate-float">
+          <span class="text-3xl">📚</span>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-primary">Python Courses*</h3>
+          <p class="text-gray-400">Complete Python Courses</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-4">
+        <a href="https://www.youtube.com/watch?v=UrsmFxEIp5k" target="_blank" class="bg-primary hover:bg-secondary px-4 py-2 rounded-lg transition-colors">
+          Python Tutorial (code with harry)
+        </a>
+        <a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agwh1XjRt242xIpHhPT2llg" target="_blank" class="bg-primary hover:bg-secondary px-4 py-2 rounded-lg transition-colors">
+          Python Tutorial 100 Days Of Code (code with harry)
+        </a>
+        <a href="https://www.youtube.com/watch?v=rfscVS0vtbw" target="_blank" class="bg-primary hover:bg-secondary px-4 py-2 rounded-lg transition-colors">
+          Python Tutorial (freecodecamp)
+        </a>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="resource-card rounded-3xl p-8 card-hover w-full md:w-[500px]">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-16 h-16 bg-secondary/20 rounded-2xl flex items-center justify-center animate-float" style="animation-delay: 0.5s;">
+          <span class="text-3xl">📜</span>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-secondary">Sheets</h3>
+          <p class="text-gray-400">Quick Reference</p>
+        </div>
+      </div>
+      <div class="space-y-3">
+        <a href="https://bugs.python.org/file47781/Tutorial_EDIT.pdf" target="_blank">
+          <div class="bg-gray-700/50 rounded-lg p-3">
+            <span class="text-accent">Official</span> Python Notes
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+</div>
+  </main>
+
+  <h5>*All links provided are from YouTube</h5>
+
+  <!-- Footer -->
+  <footer class="bg-black/40 backdrop-blur-md mt-16 py-8 border-t border-gray-700/50">
+    <div class="container mx-auto px-6 text-center">
+      <p class="text-gray-400">© 2025 - Brave-Durian2489</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Subject tab functionality
+    document.querySelectorAll('.subject-tab').forEach(tab => {
+      tab.addEventListener('click', function() {
+        // Remove active class from all tabs
+        document.querySelectorAll('.subject-tab').forEach(t => {
+          t.classList.remove('active');
+          t.classList.add('bg-gray-700', 'hover:bg-gray-600');
+        });
+        
+        // Add active class to clicked tab
+        this.classList.add('active');
+        this.classList.remove('bg-gray-700', 'hover:bg-gray-600');
+        
+        // Show relevant content
+        const subject = this.dataset.subject;
+        showComingSoon(subject);
+      });
+    });
+
+    function showComingSoon(subject) {
+      if (subject === 'python') return; // Physics content is already shown
+      
+      const materialsGrid = document.getElementById('materialsGrid');
+      const subjectNames = {
+        Web_Dev: 'Web Dev'
+      };
+      
+      materialsGrid.innerHTML = `
+        <div class="col-span-full text-center py-16">
+          <div class="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-3xl p-12 border border-gray-700/50">
+            <div class="text-6xl mb-6 animate-float">📚</div>
+            <h2 class="text-4xl font-bold mb-4 text-primary">${subjectNames[subject]} Materials</h2>
+            <p class="text-xl text-gray-300 mb-8">
+              We're working on comprehensive ${subject} resources
+            </p>
+            <div class="bg-yellow-500/20 border border-yellow-500/30 rounded-2xl p-6 max-w-md mx-auto">
+              <div class="text-3xl mb-3">⏳</div>
+              <p class="text-yellow-400 font-semibold">Coming Very Soon!</p>
+              <p class="text-gray-400 text-sm mt-2">We'll notify you when ${subject} materials are ready.</p>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Add loading animation on page load
+    window.addEventListener('load', () => {
+      document.body.classList.add('animate-fade-in');
+    });
+
+    // Add intersection observer for scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-slide-up');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.resource-card').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+
+</body>
+</html>
